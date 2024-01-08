@@ -1,0 +1,53 @@
+<!-- src/app/shopping-cart.component.html
+
+<div class="shopping-cart-container">
+    <div class="shopping-cart">
+      <h2>Shopping Cart</h2>
+      <ul>
+        <li *ngFor="let item of items" class="cart-item">
+          {{ item.name }} - ${{ item.price }} (Quantity: {{ item.quantity }})
+          <button (click)="removeItem(item.id)">Remove</button>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="add-item">
+      <h2>Add Item</h2>
+      <label for="itemName">Item Name:</label>
+      <input type="text" id="itemName" [(ngModel)]="newItemName">
+      <br>
+      <label for="itemPrice">Item Price:</label>
+      <input type="number" id="itemPrice" [(ngModel)]="newItemPrice">
+      <br>
+      <button (click)="addItem()">Add to Cart</button>
+    </div>
+  </div>
+   -->
+
+   <div class="shopping-cart-container">
+    <div class="shopping-cart">
+      <h2>Shopping Cart</h2>
+      <ul>
+        <li *ngFor="let item of items" class="cart-item">
+          {{ item.name }} - ${{ item.price }} (Quantity: {{ item.quantity }})
+          <button (click)="removeItem(item.id)">Remove</button>
+        </li>
+      </ul>
+      <p>Total Value: ${{ getTotalValue() }}</p>
+    </div>
+
+    <div class="add-item">
+      <h2>Add Item</h2>
+      <label for="itemName">Item Name:</label>
+      <input type="text" id="itemName" [(ngModel)]="newItemName">
+      <br>
+      <label for="itemPrice">Item Price:</label>
+      <input type="number" id="itemPrice" [(ngModel)]="newItemPrice">
+      <br>
+      <label for="itemQuantity">Quantity:</label>
+      <input type="number" id="itemQuantity" [(ngModel)]="newItemQuantity">
+      <br>
+      <button (click)="addItem()">Add to Cart</button>
+    </div>
+  </div>
+`
